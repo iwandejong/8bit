@@ -7,7 +7,6 @@
  * @author rogeriopvl <https://github.com/rogeriopvl>
  * @license MIT
  */
-var _ = require('lodash');
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     define([], factory);
@@ -39,8 +38,7 @@ var _ = require('lodash');
     var scaledW = canvas.width * scale;
     var scaledH = canvas.height * scale;
 
-    var tempCanvas = _.cloneDeep(canvas);
-    console.log(tempCanvas);
+    var tempCanvas = document.createElement('canvas');
     tempCanvas.width = scaledW;
     tempCanvas.height = scaledH;
 
@@ -56,7 +54,7 @@ var _ = require('lodash');
     ctx.webkitImageSmoothingEnabled = false;
     ctx.imageSmoothingEnabled = false;
 
-    // ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(tempCanvas, 0, 0, scaledW, scaledH, 0, 0, canvas.width, canvas.height);
   };
 
