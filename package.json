@@ -25,4 +25,9 @@
   "devDependencies": {
     "tape": "^4.2.0"
   }
+  {
+  "dependencies": {
+    "lodash": "^1.0.0"
+  }
+}
 }
