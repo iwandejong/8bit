@@ -27,6 +27,6 @@
 	},
 	"dependencies": {
 		"lodash": "^1.0.0",
-		"canvas": "^1.0.0"
+		"canvas": "latest"
 	}
 }
