@@ -7,7 +7,7 @@
  * @author rogeriopvl <https://github.com/rogeriopvl>
  * @license MIT
  */
-
+var _ = require('lodash');
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     define([], factory);
@@ -39,7 +39,8 @@
     var scaledW = canvas.width * scale;
     var scaledH = canvas.height * scale;
 
-    var tempCanvas = canvas.cloneNode(true);
+    var tempCanvas = _.cloneDeep(canvas);
+    console.log(tempCanvas);
     tempCanvas.width = scaledW;
     tempCanvas.height = scaledH;
 
